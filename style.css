@@ -1,6 +1,6 @@
 html {
-    background-color: #2B2B2B;
-    color: #DEDEDE;
+    background-color: #2b2b2b;
+    color: #dedede;
 }
 
 body {
@@ -38,4 +38,15 @@ a:visited {
 
 a:hover {
     text-decoration: underline;
+}
+
+#home {
+    color: #dedede;
+    text-decoration: none;
+}
+
+header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-style: none none solid none;
 }
