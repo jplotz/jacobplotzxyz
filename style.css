@@ -1,0 +1,42 @@
+html {
+    background-color: #2B2B2B;
+    color: #DEDEDE;
+}
+
+body {
+    font-family: Helvetica, Verdana, sans-serif;
+    margin-bottom: 200px;
+}
+
+h1 {
+    font-size: 2.25em;
+    margin-bottom: 0;
+}
+
+nav {
+    font-size: 1.25em;
+    text-indent: 2.5em;
+}
+
+p {
+    text-indent: 0;
+}
+
+header,article {
+    max-width: 85%;
+    padding: auto;
+    margin: auto;
+}
+
+a:link {
+    color: #4ca9c5;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #b46d95;
+}
+
+a:hover {
+    text-decoration: underline;
+}

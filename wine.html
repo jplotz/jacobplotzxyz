@@ -1,0 +1,53 @@
+<h1>How to Get Started with Wine Development</h1>
+<small><a href="https://wiki.winehq.org/Git_Wine_Tutorial">source</a></small>
+
+<ol>
+    <li>Clone the <a href="https://gitlab.winehq.org/wine/wine.git">git repository</a> for wine development</li>
+    <li>Create a fork
+        <ul>
+            <li>Use your real name on the WineHQ GitLab repository</li>
+        </ul>
+    </li>
+    <li>Fork the GitLab repository
+        <ul>
+            <li>I added my public ssh key to my GitLab profile.</li>
+            <li>Downloaded my fork of the source tree into a local directory on
+                my machine.</li>
+        </ul>
+    </li>
+    <li>My fork of the source is at <a href="https://gitlab.winehq.org/jplotz/wine">https://gitlab.winehq.org/jplotz/wine</a></li>
+    <li>Main site is at <a href="https://gitlab.winehq.org/">https://gitlab.winehq.org/</a></li>
+</ol>
+
+<h1>Regressions</h1>
+<p>Regressions are issues with code that come about as a result of changes.
+They are unexpected problems stemming from new updates to the codebase.
+</p>
+<p>Wine uses Conformance Tests, which can sometimes catch regressions.</p>
+<p><a href="https://wiki.winehq.org/Regression_Testing">https://wiki.winehq.org/Regression_Testing</a></p>
+<p>Following the compilation steps at the above link produces an error that <code>gcc
+    -m32</code> does not work. This error can be fixed by installing <code>gcc-multilib</code> package.</p>
+<p>Additionally, two more packages need to be installed to avoid errors. These are <code>libx11-dev:i386</code> and <code>libfreetype6-dev:i386</code> on my system.</p>
+<p>The ./configure script continues to give warnings about missing dependencies, but these aren't essential to running the <code>make</code> command. I should probably learn how makefiles and all that work, as I assume the build process is an important part of software development.</p>
+
+<p>I don't quite understand the information related to the wine project and 32-bit vs. 64-bit versions. Whatever I have going on with PlayOnLinux is a 32-bit version, because there is no wineprefix/*/drive_c/windows/syswow64 directory.</p>
+
+<h1>Links</h1>
+<ul>
+    <li><a href="https://wiki.winehq.org/Wine_Developer%27s_Guide/Writing_Conformance_Tests">https://wiki.winehq.org/Wine_Developer%27s_Guide/Writing_Conformance_Tests</a></li>
+    <li><a href="https://wiki.winehq.org/Conformance_Tests">https://wiki.winehq.org/Conformance_Tests</a></li>
+    <li><a href="https://wiki.winehq.org/Guest_Unit_Tests">https://wiki.winehq.org/Guest_Unit_Tests</a></li>
+    <li><a href="https://test.winehq.org/data/">https://test.winehq.org/data/</a></li>
+    <li><a href="https://wiki.winehq.org/Wine_Developer%27s_Guide">https://wiki.winehq.org/Wine_Developer%27s_Guide</a></li>
+</ul>
+
+<h1>Basic Usage</h1>
+<p>Wine can be built and run in the same directory that contains the source code. Wine comes with the <code>wine notepad</code> command to test if the program works.</p>
+<p>To run it, point it to a .exe file. It is also possible to use <code>wine start [full-file-path-here]</code>.</p>
+<p><a href="https://wiki.winehq.org/Wine_User%27s_Guide#Using_Wine">Using Wine</a></p>
+<img src="fresh build.png" alt="How to get a fresh build of wine every day">
+<p><a href="https://wiki.winehq.org/Developer_FAQ#How_can_I_improve_the_chances_of_my_changes_being_approved.3F">Improve chances of patch being approved</a></p>
+<blockquote>
+    Wine uses test-driven development to a large extent; we write a test, make sure it passes on Windows, and then get it to pass on Wine by fixing Wine.
+</blockquote>
+<p>I ought to run winetest.exe or whatever it's called on Windows. I don't understand what the output of conformance tests actually looks like. I also have no idea if Wine aims to support Win10 or only Win7 and below.</p>
