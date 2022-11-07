@@ -50,3 +50,9 @@ header {
     padding-bottom: 10px;
     border-style: none none solid none;
 }
+
+/* Space out links for the sake of mobile users */
+li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
